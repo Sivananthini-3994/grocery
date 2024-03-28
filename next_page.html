@@ -1,0 +1,1294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vegetables</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:white;
+}
+
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:3px 1%;
+    background:#a39595;
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color:rgb(4, 73, 52);
+}
+.header .logo:hover{
+  color: orange;
+}
+.head{
+  font-size: 6.5rem;
+  font-weight: bolder;
+  color: green;
+}
+.header .logo i{
+    color:green;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:rgb(4, 77, 49);
+}
+
+.header .navbar a:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.header .shopping-cart.active{
+    right:2rem;
+    transition: .4s linear;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    position: relative;
+    margin:1rem 0;
+}
+
+
+
+.cart-count
+{
+  font-size: 15px;
+  margin-left: 2%;
+  position: absolute;
+  background-color: white;
+  width:15px;
+  height:20px;
+  padding-left: 5px;
+  border-radius: 50%;
+  margin-top: 0.1%;
+}
+
+
+.image1 i
+{
+    margin-left: 0.7%;
+    width:40px;
+    height:40px;
+    margin-top: 0.7%;
+    position: absolute;
+}
+
+.swipe
+{
+   
+    width:530px;
+    height:500px;
+    margin-left: 480px;
+    margin-top: 6%;
+     border: 2px solid rgb(201, 14, 132);
+     background-color: white;
+}
+
+.firstshop
+{
+    display: flex;
+    flex-direction: row;
+    border-bottom:2px dotted rgb(201, 14, 132);;
+}
+
+
+.tomato img
+{
+    width: 120px;
+    height:120px;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+
+.tomato1
+{
+    color:rgb(201, 14, 132);
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-top:10%;
+}
+.tom
+{
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+}
+
+.imagetom img
+{
+    width:250px;
+    height:250px;
+    margin-left: 220%;
+    margin-top: 0%;
+}
+
+.texttom
+{
+    margin-left: 75px;
+    margin-top: 20%;
+    font-size: 16px;
+}
+
+.dashtom 
+{
+    margin-left: 60px;
+    margin-top: 20%;
+    font-size: 16px;
+  }
+
+
+.pricetom
+{
+    margin-left: 55px;
+    margin-top: 20%;
+    font-size: 16px;
+}
+
+.plustom button
+{
+    margin-left: 15px;
+    margin-top: 660%;
+    font-weight: bolder;
+    border: 1px solid black;
+    width:25px;
+    height:30px;
+    padding-left: 2px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.boxtom button
+{
+    margin-top: 660%;
+    width:25px;
+    height:30px;
+    margin-left: 15px;
+    border: 1px solid black;
+    padding-left: 8px;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+
+.mintom button
+{
+    margin-top: 660%;
+    margin-left: 15px;
+    font-weight: bolder;
+    border: 1px solid black;
+    width:25px;
+    height:30px;
+    padding-left: 8px;
+    background-color: white;
+    border-radius: 5px;
+}
+.add-to-cart
+{
+    background-color: orange;
+    color:white;
+    font-weight: bolder;
+    height:40px;
+    width:110px;
+    margin-left: 15px;
+    margin-top: 19%;
+    text-align: center;
+    border-radius: 5px;
+    padding-top: 5px;
+    border: none;
+}
+
+.add-to-cart:hover{
+      background-color: #218838;
+    }
+
+.greens
+{
+    display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+}
+
+.greens.dashtom
+{
+    margin-left: 25px;
+}
+
+.greens .plustom
+{
+    margin-left: 10px;
+}
+
+.onion
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+  
+}
+
+.onion .plustom
+{
+    margin-left: 10px;
+}
+
+.onion.dashtom
+{
+    margin-left: 39px;
+  
+}
+.cart1
+{
+  position: fixed;
+  top:0;
+  right:-100%;
+  width:300px;
+  height:100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color:#a39595;
+}
+
+.cart1-active
+{
+  left:0;
+  transition: 0.5s;
+}
+.carttitle
+{
+  height: 110px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color:rgb(11, 66, 11);
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color:#a39595 ;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+
+.boxcart
+{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  gap:10px;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.cart-img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  padding: 5px;
+}
+.header .image1 
+{
+  width:100px;
+  height:100px;
+  object-fit: cover;
+  padding: 5px;
+  margin-top: 20%;
+}
+
+.details
+{
+  row-gap: 3rem;
+ 
+}
+
+.price-cart
+{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.quantity-cart
+{
+  margin-top: 5px;
+  width:95%;
+}
+
+.product-title
+{
+  text-transform: uppercase;
+  color:green;
+  font-weight: bold;
+}
+
+.remove-items
+{
+  width:15px;
+  height:15px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.cart-price
+{
+  font-weight: bold;
+}
+
+.quantity-cart
+{
+  border:1px solid rgba(0,0,0,0.1);
+  outline: none;
+  width:2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+.close-img
+{
+  width:10px;
+  height:10px;
+}
+
+.total
+{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1rem;
+}
+
+.total-name
+{
+   font-weight: 700px;
+}
+
+.total-price
+{
+   margin-left: 10px;
+}
+
+.buy-button
+{
+  padding:12px;
+  margin-top: 250px;
+  margin-left: 50px;
+  border-radius: 5px;
+  background-color: orange;
+  color:white;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.buy-button:hover{
+  background-color: orange;
+}
+.close-img
+{
+   position: absolute;
+   top:20px;
+   right: 20px;
+   cursor: pointer;
+   width:15px;
+   height:15px;
+}
+
+
+#goBackBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #goBackBtn:hover {
+    background-color: #0056b3;
+  }
+    </style>
+</head>
+<body>
+  
+
+
+  <div class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-shopping-basket"></i> Grocery </a>
+
+    <nav class="navbar">
+        
+        <a class="head"><h1>Products</h1></a>
+        
+    </nav>
+    
+
+        <div class="cart">
+          <div class="cart-count">0</div>
+          <div class="image1" id="cart-pic"><i class="fas fa-shopping-cart"></i></div>
+         </div>
+        
+         <div class="cart1">
+            <div class="carttitle"><h1>SHOPPING<br>BASKET<br>PRODUCTS</h1>
+            </div>
+            <div class="cartcontent">
+                 
+            </div>
+
+            <div class="total">
+              <div class="total-name">Total</div>
+              <div class="total-price">Rs.0</div>
+            </div>
+
+            <button class="buy-button" onclick="placeorder()">Place Order</button>
+            <img src="close.png" class="close-img" id="close-image">
+          </div>
+ </div>
+
+          <div class="onion">
+            <div class="imagetom"><img src="product-1.png" class="veg-img"></div>
+            <div class="texttom">Orange</div><br>
+            <div class="dashtom veg-piece1">1kg</div>
+            <div class="pricetom price-amt1">50</div>
+            <div class="plustom"><button onclick="sub1()" ondblclick="defaultone()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add1()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+           </div>
+
+           <div class="tom">
+            <div class="imagetom"><img src="product-2.png" class="veg-img"></div>
+            <div class="texttom">Onion</div>
+            <div class="dashtom veg-piece2">1kg</div>
+            <div class="pricetom price-amt2">60</div>
+            <div class="plustom"><button onclick="sub2()" ondblclick="defaulttwo()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add2()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+
+           <div class="tom">
+            <div class="imagetom"><img src="product-3.png" class="veg-img"></div>
+            <div class="texttom">Meat</div>
+            <div class="dashtom veg-piece3">1kg</div>
+            <div class="pricetom price-amt3">150</div>
+            <div class="plustom"><button onclick="sub3()" ondblclick="defaultthree()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add3()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+
+           <div class="tom">
+            <div class="imagetom"><img src="product-4.png" class="veg-img"></div>
+            <div class="texttom">Cabbage</div>
+            <div class="dashtom veg-piece4">1kg</div>
+            <div class="pricetom price-amt4">25</div>
+            <div class="plustom"><button onclick="sub4()" ondblclick="defaultfour()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add4()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+
+           <div class="tom">
+            <div class="imagetom"><img src="product-5.png" class="veg-img"></div>
+            <div class="texttom">Potato</div>
+            <div class="dashtom veg-piece5">1kg</div>
+            <div class="pricetom price-amt5">40</div>
+            <div class="plustom"><button onclick="sub5()" ondblclick="defaultfive()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add5()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product-6.png" class="veg-img"></div>
+            <div class="texttom">Avocado</div>
+            <div class="dashtom veg-piece6">1kg</div>
+            <div class="pricetom price-amt6">50</div>
+            <div class="plustom"><button onclick="sub6()" ondblclick="defaultsix()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add6()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product-7.png" class="veg-img"></div>
+            <div class="texttom">Carrot</div>
+            <div class="dashtom veg-piece7">1kg</div>
+            <div class="pricetom price-amt7">20</div>
+            <div class="plustom"><button onclick="sub7()" ondblclick="defaultseven()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add7()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product-8.png" class="veg-img"></div>
+            <div class="texttom">lemon</div>
+            <div class="dashtom veg-piece8">1kg</div>
+            <div class="pricetom price-amt8">30</div>
+            <div class="plustom"><button onclick="sub8()" ondblclick="defaulteight()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add8()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product-9.png" class="veg-img"></div>
+            <div class="texttom">Prone fish</div>
+            <div class="dashtom veg-piece9">1kg</div>
+            <div class="pricetom price-amt9">150</div>
+            <div class="plustom"><button onclick="sub9()" ondblclick="defaultnine()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add9()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product-10.png" class="veg-img"></div>
+            <div class="texttom">Watermelon</div>
+            <div class="dashtom veg-piece10">1kg</div>
+            <div class="pricetom price-amt10">20</div>
+            <div class="plustom"><button onclick="sub10()" ondblclick="defaultten()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add10()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product11.jpeg" class="veg-img" height="130px" width="150px"></div>
+            <div class="texttom">Apple</div>
+            <div class="dashtom veg-piece11">1kg</div>
+            <div class="pricetom price-amt11">90</div>
+            <div class="plustom"><button onclick="sub11()" ondblclick="defaultonee()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add11()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product12.jpeg" class="veg-img"></div>
+            <div class="texttom">Pogranate</div>
+            <div class="dashtom veg-piece12">1kg</div>
+            <div class="pricetom price-amt12">60</div>
+            <div class="plustom"><button onclick="sub12()" ondblclick="defaulttwoo()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add12()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product13.jpeg" class="veg-img"></div>
+            <div class="texttom">Dragon fruit</div>
+            <div class="dashtom veg-piece13">1kg</div>
+            <div class="pricetom price-amt13">90</div>
+            <div class="plustom"><button onclick="sub13()" ondblclick="defaultthreee()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add13()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product14.jpeg" class="veg-img"></div>
+            <div class="texttom">Strawberry</div>
+            <div class="dashtom veg-piece14">1kg</div>
+            <div class="pricetom price-amt14">70</div>
+            <div class="plustom"><button onclick="sub14()" ondblclick="defaultfourr()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add14()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+           <div class="tom">
+            <div class="imagetom"><img src="product15.jpeg" class="veg-img"></div>
+            <div class="texttom">1/2 L Milk</div>
+            <div class="dashtom veg-piece15">1kg</div>
+            <div class="pricetom price-amt15">45</div>
+            <div class="plustom"><button onclick="sub15()" ondblclick="defaultfivee()">-</button></div>
+            <div class="boxtom"><button>1</button></div>
+            <div class="mintom"><button onclick="add15()" >+</button></div>
+            <button class="add-to-cart">Add to Cart</button>
+           </div>
+           </div>
+
+           
+<button id="goBackBtn">Go Back</button>
+<script>
+
+document.getElementById("goBackBtn").addEventListener("click", function() {
+    // Navigate back to the index page
+    window.location.href = "index.html";
+  });
+
+
+            const buttoncart=document.querySelector('#cart-pic');
+           const cart=document.querySelector('.cart1');
+           const buttonclose=document.querySelector('#close-image');
+
+           buttoncart.addEventListener('click',()=>{
+              cart.classList.add('cart1-active');
+           });
+
+           buttonclose.addEventListener('click',()=>{
+              cart.classList.remove('cart1-active');
+           });
+
+
+           document.addEventListener('DOMContentLoaded',loadVeg);
+
+           function loadVeg()
+           {
+            loadContent();
+           }
+
+           function loadContent()
+           {
+               //remove vegetables from cart
+               let cartremove=document.querySelectorAll('.remove-items');
+               cartremove.forEach((button)=>{
+                button.addEventListener('click',removeItem);
+               });
+
+               //quantity change
+               let quantityEle=document.querySelectorAll('.quantity-cart');
+               quantityEle.forEach((input)=>{
+                input.addEventListener('change',qutyChange);
+               });
+
+               //products add to cart
+               let buttonCart=document.querySelectorAll('.add-to-cart');
+               console.log(buttonCart);
+               buttonCart.forEach((butn)=>{
+                butn.addEventListener('click',addCart);
+               });
+
+               totalCal();
+
+           }
+
+           //product removal
+           function removeItem()
+           {
+
+              if(confirm('Are you sure to remove'))
+              {
+               console.log("click");
+               let titlename=this.parentElement.querySelector('.product-title').innerHTML;
+               console.log(titlename);
+               listItem=listItem.filter(el=>el.titlename!=titlename);
+              this.parentElement.remove();
+              loadContent();
+
+              }
+           }
+
+           //quantity change
+           function qutyChange()
+           {
+             if(isNaN(this.value) || this.value<1)
+             {
+              this.value=1;
+             }
+             loadContent();
+           }
+
+           let listItem=[];
+
+           //product add to cart
+           function addCart()
+           {
+            
+            let vegetable=this.parentElement;
+            let titlename=vegetable.querySelector('.texttom').innerHTML;
+            let price=vegetable.querySelector('.pricetom').innerHTML;
+            let imgSrc=vegetable.querySelector('.veg-img').src;
+
+            let productsInside={titlename,price,imgSrc}
+
+            //product repetiton check
+            if(listItem.find((el)=>el.titlename==productsInside.titlename))
+            {
+              alert("Product"+" "+titlename+"is already added");
+              return
+            }
+            else
+            {
+              listItem.push(productsInside);
+            }
+
+
+            let newItem=createCartItem(titlename,price,imgSrc);
+            let element=document.createElement('div');
+
+            element.innerHTML=newItem;
+            
+            let cartAdd=document.querySelector('.cartcontent');
+            cartAdd.append(element);
+            loadContent()
+
+           } 
+           
+           function createCartItem(titlename,price,imgSrc)
+           {
+
+             return `
+             <div class="boxcart">
+             <img src="${imgSrc}" class="cart-img">
+             <div class="details">
+              <div class="product-title">${titlename}</div>
+              <div class="price-cart">
+              <div class="cart-price">${price}</div>
+              <div class="amt-cart">${price}</div>
+             </div>
+             <input type="number" value="1" class="quantity-cart">
+             </div>
+             <img src="delete.png" class="remove-items">
+            </div>
+            ` ;
+           }
+
+
+           function totalCal()
+           {
+             const itemsInCart=document.querySelectorAll('.boxcart');
+             const totalAmt=document.querySelector('.total-price');
+
+
+             let totals=0;
+             itemsInCart.forEach(products=>{
+
+              let elementOfPrice=products.querySelector('.cart-price');
+              console.log(elementOfPrice);
+
+              let prices=parseFloat(elementOfPrice.innerHTML.replace("Rs.",""));
+              console.log(prices);
+              let quantityOfProduct=products.querySelector('.quantity-cart').value;
+              console.log(quantityOfProduct);
+
+              totals+=(prices*quantityOfProduct);
+              console.log(totals)
+              products.querySelector('.amt-cart').innerText="Rs."+(prices*quantityOfProduct);
+
+            
+             });
+             totalAmt.innerHTML='Rs.'+totals;
+
+             //cart counting
+
+             const countCart=document.querySelector('.cart-count');
+             let counting=listItem.length;
+             countCart.innerHTML=counting;
+           
+           
+            if(counting==0)
+            {
+              countCart.style.display='none';
+            }else{
+              countCart.style.display='block';
+            }
+          }
+          function placeorder()
+    {
+      var newItem1=document.querySelector('.boxcart');
+      if(newItem1)
+      {
+        alert('Your order is placed');
+      }
+
+        if(!newItem1)
+      {
+        alert('your cart is empty');
+      }
+
+      
+      
+    }
+
+    
+    
+    function sub1()
+     {
+      let qty=document.querySelector('.veg-piece1');
+     let amount=document.querySelector('.price-amt1');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="25";
+     }
+
+
+     function defaultone()
+     {
+      let qty=document.querySelector('.veg-piece1');
+     let amount=document.querySelector('.price-amt1');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="50";
+     }
+
+     function add1()
+     {
+      let qty=document.querySelector('.veg-piece1');
+     let amount=document.querySelector('.price-amt1');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="100";
+     }
+     
+    
+    function sub2()
+     {
+      let qty=document.querySelector('.veg-piece2');
+     let amount=document.querySelector('.price-amt2');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="30";
+     }
+
+
+     function defaulttwo()
+     {
+      let qty=document.querySelector('.veg-piece2');
+     let amount=document.querySelector('.price-amt2');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="60";
+     }
+
+     function add2()
+     {
+      let qty=document.querySelector('.veg-piece2');
+     let amount=document.querySelector('.price-amt2');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="120";
+     }
+    
+    function sub3()
+     {
+      let qty=document.querySelector('.veg-piece3');
+     let amount=document.querySelector('.price-amt3');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="75";
+     }
+
+
+     function defaultthree()
+     {
+      let qty=document.querySelector('.veg-piece3');
+     let amount=document.querySelector('.price-amt3');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="150";
+     }
+
+     function add3()
+     {
+      let qty=document.querySelector('.veg-piece3');
+     let amount=document.querySelector('.price-amt3');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="300";
+     }
+
+     
+    function sub4()
+     {
+      let qty=document.querySelector('.veg-piece4');
+     let amount=document.querySelector('.price-amt4');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="20";
+     }
+
+
+     function defaultfour()
+     {
+      let qty=document.querySelector('.veg-piece4');
+     let amount=document.querySelector('.price-amt4');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="25";
+     }
+
+     function add4()
+     {
+      let qty=document.querySelector('.veg-piece4');
+     let amount=document.querySelector('.price-amt4');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="50";
+     }
+
+     
+    function sub5()
+     {
+      let qty=document.querySelector('.veg-piece5');
+     let amount=document.querySelector('.price-amt5');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="20";
+     }
+
+
+     function defaultfive()
+     {
+      let qty=document.querySelector('.veg-piece5');
+     let amount=document.querySelector('.price-amt5');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="40";
+     }
+
+     function add5()
+     {
+      let qty=document.querySelector('.veg-piece5');
+     let amount=document.querySelector('.price-amt5');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="80";
+     }
+     
+    function sub6()
+     {
+      let qty=document.querySelector('.veg-piece6');
+     let amount=document.querySelector('.price-amt6');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="25";
+     }
+
+
+     function defaultsix()
+     {
+      let qty=document.querySelector('.veg-piece6');
+     let amount=document.querySelector('.price-amt6');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="50";
+     }
+
+     function add6()
+     {
+      let qty=document.querySelector('.veg-piece6');
+     let amount=document.querySelector('.price-amt6');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="100";
+     }
+
+     
+    function sub7()
+     {
+      let qty=document.querySelector('.veg-piece7');
+     let amount=document.querySelector('.price-amt7');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="10";
+     }
+
+
+     function defaultseven()
+     {
+      let qty=document.querySelector('.veg-piece7');
+     let amount=document.querySelector('.price-amt7');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="20";
+     }
+
+     function add7()
+     {
+      let qty=document.querySelector('.veg-piece7');
+     let amount=document.querySelector('.price-amt7');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="40";
+     }
+
+     
+    function sub8()
+     {
+      let qty=document.querySelector('.veg-piece8');
+     let amount=document.querySelector('.price-amt8');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="15";
+     }
+
+
+     function defaulteight()
+     {
+      let qty=document.querySelector('.veg-piece8');
+     let amount=document.querySelector('.price-amt8');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="30";
+     }
+
+     function add8()
+     {
+      let qty=document.querySelector('.veg-piece8');
+     let amount=document.querySelector('.price-amt8');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="60";
+     }
+
+     
+    function sub9()
+     {
+      let qty=document.querySelector('.veg-piece9');
+     let amount=document.querySelector('.price-amt9');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="75";
+     }
+
+
+     function defaultnine()
+     {
+      let qty=document.querySelector('.veg-piece9');
+     let amount=document.querySelector('.price-amt9');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="150";
+     }
+
+     function add9()
+     {
+      let qty=document.querySelector('.veg-piece9');
+     let amount=document.querySelector('.price-amt9');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="300";
+     }
+     
+    function sub10()
+     {
+      let qty=document.querySelector('.veg-piece10');
+     let amount=document.querySelector('.price-amt10');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="10";
+     }
+
+
+     function defaultten()
+     {
+      let qty=document.querySelector('.veg-piece10');
+     let amount=document.querySelector('.price-amt10');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="20";
+     }
+
+     function add10()
+     {
+      let qty=document.querySelector('.veg-piece10');
+     let amount=document.querySelector('.price-amt10');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="40";
+     }
+     
+    function sub11()
+     {
+      let qty=document.querySelector('.veg-piece11');
+     let amount=document.querySelector('.price-amt11');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="45";
+     }
+
+
+     function defaultonee()
+     {
+      let qty=document.querySelector('.veg-piece11');
+     let amount=document.querySelector('.price-amt11');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="90";
+     }
+
+     function add11()
+     {
+      let qty=document.querySelector('.veg-piece11');
+     let amount=document.querySelector('.price-amt11');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="180";
+     }
+
+     
+
+
+     function sub12()
+     {
+      let qty=document.querySelector('.veg-piece12');
+     let amount=document.querySelector('.price-amt12');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="10";
+     }
+
+
+     function defaulttwoo()
+     {
+      let qty=document.querySelector('.veg-piece12');
+     let amount=document.querySelector('.price-amt12');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="20";
+     }
+
+     function add12()
+     {
+      let qty=document.querySelector('.veg-piece12');
+     let amount=document.querySelector('.price-amt12');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="40";
+     }
+
+     
+
+
+     function sub13()
+     {
+      let qty=document.querySelector('.veg-piece13');
+     let amount=document.querySelector('.price-amt13');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="10";
+     }
+
+
+     function defaultthreee()
+     {
+      let qty=document.querySelector('.veg-piece13');
+     let amount=document.querySelector('.price-amt13');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="20";
+     }
+
+     function add13()
+     {
+      let qty=document.querySelector('.veg-piece13');
+     let amount=document.querySelector('.price-amt13');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="40";
+     }
+
+     
+
+
+     function sub14()
+     {
+      let qty=document.querySelector('.veg-piece14');
+     let amount=document.querySelector('.price-amt14');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="35";
+     }
+
+
+     function defaultfourr()
+     {
+      let qty=document.querySelector('.veg-piece14');
+     let amount=document.querySelector('.price-amt14');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="70";
+     }
+
+     function add14()
+     {
+      let qty=document.querySelector('.veg-piece14');
+     let amount=document.querySelector('.price-amt14');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="140";
+     }
+
+     
+
+
+     function sub15()
+     {
+      let qty=document.querySelector('.veg-piece15');
+     let amount=document.querySelector('.price-amt15');
+      
+     qty.innerHTML="1/2 kg";
+     amount.innerHTML="25";
+     }
+
+
+     function defaultfivee()
+     {
+      let qty=document.querySelector('.veg-piece15');
+     let amount=document.querySelector('.price-amt15');
+      
+     qty.innerHTML="1 kg";
+     amount.innerHTML="45";
+     }
+
+     function add15()
+     {
+      let qty=document.querySelector('.veg-piece15');
+     let amount=document.querySelector('.price-amt15');
+      
+     qty.innerHTML="2 kg";
+     amount.innerHTML="90";
+     }    </script>
+
+           </body>
+           </html>
